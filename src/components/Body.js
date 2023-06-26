@@ -16,6 +16,8 @@ const Body =()=>{
 
         const json =await data.json();
         console.log(json);
+        //Optional Chaining//
+        setlistOfRestaurents(json?.data?.cards[2]?.data?.data?.cards);
     
     
     };
