@@ -49,3 +49,10 @@
     padding: 10px;
     cursor:pointer
 }
+
+.shimmer-cards{
+    margin:20px;
+    width:200px;
+    height:400px;
+    background-color: red;
+}

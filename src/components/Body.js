@@ -1,6 +1,7 @@
 import { useState,useEffect} from "react";
 import resList from "../utils/mockData";
 import RestaurentCard from "./Restaurentcard";
+import Shimmer from "./Shimmer";
 
 const Body =()=>{
     //Local State Variable - Super Powerful Variable//
@@ -21,6 +22,10 @@ const Body =()=>{
     
     
     };
+
+    if(listOfRestaurents.length == 0){
+        return <h1><Shimmer/></h1>;
+    }
 
     return(
          <div className='body'>
