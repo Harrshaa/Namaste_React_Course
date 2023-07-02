@@ -56,3 +56,7 @@
     height:400px;
     background-color: red;
 }
+
+.filter{
+    display: flex;
+}
