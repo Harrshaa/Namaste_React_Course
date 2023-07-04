@@ -45,8 +45,9 @@
     flex-wrap: wrap;
     
 }
-.filter-btn{
+.filter-btn,.searchButton{
     padding: 10px;
+    margin :2px;
     cursor:pointer
 }
 
@@ -59,4 +60,7 @@
 
 .filter{
     display: flex;
+}
+.search-box{
+    margin:2px;
 }
