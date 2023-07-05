@@ -2,8 +2,7 @@
   "name": "food_delivery_app",
   "version": "1.0.0",
   "description": "Food Delivery APP like Swiggy ",
-  
-  "scripts": {    
+  "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"
@@ -29,7 +28,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
   }
-  
 }

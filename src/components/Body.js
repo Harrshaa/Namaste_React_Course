@@ -5,6 +5,7 @@ import resList from "../utils/mockData";
 import RestaurentCard from "./Restaurentcard";
 import Shimmer from "./Shimmer";
 import { useState } from "react";
+import {createBrowserRouter} from "react-router-dom";
 
  
 
@@ -16,7 +17,7 @@ const Body =()=>{
      
 
     useEffect(()=>{
-        fetchData();
+        fetchData();  
     },[]);
 
 
