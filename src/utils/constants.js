@@ -4,3 +4,5 @@ export const CDN_URL='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_
 export const LOGO_URL="https://www.shutterstock.com/image-vector/food-delivery-logo-template-design-260nw-759961531.jpg";
 
 
+  export const MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId="
