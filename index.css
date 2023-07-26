@@ -64,3 +64,8 @@
 .search-box{
     margin:2px;
 }
+
+.user-card{
+    padding:10px;
+    border: 1px solid black;
+}
