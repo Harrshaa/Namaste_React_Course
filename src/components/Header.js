@@ -3,7 +3,7 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 const Header=()=>{
-    
+        
     let [btnName,setbtnName]=useState("login");
     return(
         <div className='header'>
@@ -22,6 +22,7 @@ const Header=()=>{
                         <Link to="/contact">Contact Us</Link>
                     </li>
                     <li>Cart</li>
+                    
                     <button className="login" onClick={()=>{
                         if(btnName==="login") setbtnName("logOut");
                         else

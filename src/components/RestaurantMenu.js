@@ -4,8 +4,7 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 
-const RestaurantMenu = () => {
-    
+const RestaurantMenu = () => {    
     const [resInfo,setResInfo]=useState(null);
 
     const { resId } =useParams();
@@ -31,7 +30,7 @@ const RestaurantMenu = () => {
   
   return (
     <div className="menu">
-        <h1>Helloo All</h1>
+        
         <h1>{name}</h1> 
         <h3>{cuisines.join(",")}</h3>
         <h3>{costForTwoMessage}</h3>

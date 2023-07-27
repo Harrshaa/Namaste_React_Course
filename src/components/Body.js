@@ -25,10 +25,10 @@ const Body =()=>{
     const fetchData = async()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
         const json =await data.json();
-        console.log(json);
+        // console.log(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
         //Optional Chaining//
-        setlistOfRestaurents(json.data.cards[2].data.data.cards);
-        setfilteredRestaurents(json.data.cards[2].data.data.cards);
+        setlistOfRestaurents(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setfilteredRestaurents(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
 
@@ -42,7 +42,7 @@ const Body =()=>{
                 <button className="searchButton" onClick={()=>{
                     //Filter the Restaurent cards and update UI//
                     const filtered=listOfRestaurents.filter(
-                        (res)=>res.data.name.toLowerCase().includes(searchText)
+                        (res)=>res.info.name.toLowerCase().includes(searchText)
                         );
                         setfilteredRestaurents(filtered);                  
                     
@@ -53,7 +53,7 @@ const Body =()=>{
             <button className="filter-btn" 
                 onClick={()=>{
                     const filteredList=listOfRestaurents.filter(
-                        (res)=> res.data.avgRating >4                       
+                        (res)=> res.info.avgRating >4                       
                     );
                     setlistOfRestaurents(filteredList);               
                     }}>Top Rated Restaurents</button>
@@ -64,7 +64,7 @@ const Body =()=>{
 
             <div className='res-container'>              
                 {filteredRestaurents.map((restaurent)=>(
-                <Link to={"/restaurants/"+restaurent.data.id}><RestaurentCard key={restaurent.data.id} resData ={restaurent} /></Link>
+                <Link to={"/restaurants/"+restaurent.info.id}><RestaurentCard key={restaurent.info.id} resData ={restaurent} /></Link>
                 ))}              
             </div>
 
